@@ -6,7 +6,7 @@ Bundler.require
 require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/json'
-require 'activerecord'
+require 'active-record'
 require 'pry'
 require './endpoints.rb'
 require './Rakefile'
