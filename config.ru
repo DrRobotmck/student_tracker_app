@@ -8,7 +8,7 @@ require 'sinatra/reloader'
 require 'sinatra/json'
 require 'active_record'
 require './endpoints.rb'
-require './Rakefile'
+# require './Rakefile'
 
 # development
 ActiveRecord::Base.establish_connection({
