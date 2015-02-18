@@ -7,6 +7,8 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/json'
 require 'active_record'
+require './db/student.rb'
+require './db/assignment.rb'
 require './endpoints.rb'
 # require './Rakefile'
 
