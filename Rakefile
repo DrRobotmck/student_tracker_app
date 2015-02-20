@@ -1,4 +1,11 @@
 require 'httparty'
+require 'active_record'
+require_relative 'db/student.rb'
+
+ActiveRecord::Base.establish_connection({
+  database: 'student_tracker_app',
+  adapter: 'postgresql'
+})
 
 namespace :homework do
 	desc 'Merge pull requests and log student assignment data'
