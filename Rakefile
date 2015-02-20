@@ -1,3 +1,5 @@
+require 'httparty'
+
 namespace :homework do
 	desc 'Merge pull requests and log student assignment data'
 
