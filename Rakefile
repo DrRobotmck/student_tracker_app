@@ -55,7 +55,11 @@ namespace :homework do
 		def log_pull_data(pull_requests)
 			pull_requests.each do |pull|
 				student = Student.find_by(github_handle: pull[:student])
-				student.assignments.create(pull[:hw_stats])
+				p student
+				p pull[:hw_stats]
+				assignment = Assignment.create(pull[:hw_stats])
+				student.assignments << assignment
+				p student.assignments
 			end
 		end
 
