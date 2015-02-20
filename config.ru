@@ -11,6 +11,7 @@ require 'httparty'
 require './db/student.rb'
 require './db/assignment.rb'
 require './endpoints.rb'
+require './merge_and_log'
 # require './Rakefile'
 
 # development
