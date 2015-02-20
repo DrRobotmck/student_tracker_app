@@ -1,7 +1,7 @@
 namespace :homework do
 	desc 'Merge pull requests and log student assignment data'
 
-	task merge_and_log: :environment do
+	task :merge_and_log do
 
 		GITHUB_NAME = ENV['GITHUB_USERNAME']
 		GITHUB_PASS = ENV['GITHUB_PASSWORD']
