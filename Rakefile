@@ -3,10 +3,7 @@ require 'active_record'
 require_relative 'db/student.rb'
 require_relative 'db/assignment.rb'
 
-ActiveRecord::Base.establish_connection({
-  database: 'student_tracker_app',
-  adapter: 'postgresql'
-})
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
 namespace :homework do
 	desc 'Merge pull requests and log student assignment data'
