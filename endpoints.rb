@@ -11,6 +11,7 @@ module StudentTracker
 
 		get '/merge' do
 			MergeAndLog.merge_and_log
+			redirect '/breakdown'
 		end
 
 		get '/breakdown' do
