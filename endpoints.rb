@@ -14,7 +14,6 @@ module StudentTracker
 			instructor = Student.find_by(github_handle: params[:github_handle], is_instructor: true)
 			if instructor
 				session[:instructor] = { instructor: true, github_handle: params[:github_handle] }
-				p session
 				redirect '/breakdown'
 			else
 				redirect '/'

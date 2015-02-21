@@ -14,14 +14,14 @@ require './endpoints'
 require './merge_and_log'
 
 # development
-ActiveRecord::Base.establish_connection({
-	adapter: 'postgresql',
-	database: 'student_tracker_app',
-	host: 'localhost'
-})
-require 'pry'
+# ActiveRecord::Base.establish_connection({
+# 	adapter: 'postgresql',
+# 	database: 'student_tracker_app',
+# 	host: 'localhost'
+# })
+# require 'pry'
 
-# ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
 
 after { ActiveRecord::Base.connection.close}
 
