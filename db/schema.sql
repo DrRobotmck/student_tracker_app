@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS students             CASCADE;
 CREATE TABLE students (
 	id            SERIAL PRIMARY KEY,
 	name          VARCHAR(255),
-	github_handle VARCHAR(255)
+	github_handle VARCHAR(255),
+	is_instructor BOOLEAN
 );
 
 CREATE TABLE assignments (
