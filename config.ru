@@ -21,7 +21,7 @@ require './merge_and_log'
 # })
 # require 'pry'
 
-ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/student_tracker_app')
 
 after { ActiveRecord::Base.connection.close}
 
