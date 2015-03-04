@@ -1,4 +1,3 @@
-
 module StudentTracker
 
 	class App < Sinatra::Application
