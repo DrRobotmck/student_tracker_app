@@ -22,6 +22,10 @@ module StudentTracker
 		end
 
 		get '/merge' do
+			erb :merge
+		end
+
+		post '/merge' do
 			MergeAndLog.merge_and_log
 			redirect '/breakdown'
 		end
