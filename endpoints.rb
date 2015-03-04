@@ -22,12 +22,20 @@ module StudentTracker
 		end
 
 		get '/merge' do
-			erb :merge
+			if session[:instructor]
+				erb :merge
+			else
+				redirect '/'
+			end
 		end
 
 		post '/merge' do
-			MergeAndLog.merge_and_log
-			redirect '/breakdown'
+			if session[:instructor]
+				MergeAndLog.merge_and_log
+				redirect '/breakdown'
+			else
+				redirect '/'
+			end
 		end
 
 		get '/breakdown' do
