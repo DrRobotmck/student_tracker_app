@@ -1,5 +1,5 @@
 require 'active_record'
-require_relative './student.rb'
+require_relative '../models/student.rb'
 
 ActiveRecord::Base.establish_connection({
   database: 'student_tracker_app',
