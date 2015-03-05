@@ -25,6 +25,23 @@ module StudentTracker
 			redirect '/breakdown'
 		end
 
+		get '/keys' do
+			if session[:instructor]
+				@instructors = Student.instructors
+				erb :keys
+			else
+				redirect '/'
+			end
+		end
+
+		post '/keys' do
+			instructor = Student.find(params[:student_id])
+			if instructor.is_instructor
+				ApiKey.generate_for(instructor)
+			end
+			redirect '/keys'
+		end
+
 		get '/breakdown' do
 			if session[:instructor]
 				results = Student.all.as_json(include: :assignments)

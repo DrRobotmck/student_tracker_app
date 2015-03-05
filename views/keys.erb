@@ -1,0 +1,15 @@
+<% @instructors.each do |instructor| %>
+  <p>
+    <strong><%= instructor.name %></strong>
+    <% if instructor.api_key %>
+      <br>
+      <%= instructor.api_key.key %>
+    <% else %>
+      <form action="/keys" method="post">
+        <input type="hidden" name="student_id" value="<%= instructor.id %>">
+        <input type="submit">
+      </form>
+    <% end %>
+  </p>
+
+<% end %>
