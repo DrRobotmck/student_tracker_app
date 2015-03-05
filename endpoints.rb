@@ -55,7 +55,7 @@ module StudentTracker
 		end
 
 		get '/breakdown' do
-			if session[:instructor]
+			if session[:instructor] || ApiKey.authenticate_instructor(params[:key])
 				results = Student.all.as_json(include: :assignments)
 				json results
 			else

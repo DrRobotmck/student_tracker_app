@@ -7,4 +7,9 @@ class ApiKey < ActiveRecord::Base
 
     create( key: key, student: student )
   end
+
+  def self.authenticate_instructor(key)
+    apiKey = find_by(key: key)
+    apiKey && apiKey.student.is_instructor
+  end
 end
