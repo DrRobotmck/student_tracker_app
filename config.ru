@@ -10,6 +10,7 @@ require 'active_record'
 require 'httparty'
 require './models/student'
 require './models/assignment'
+require './models/api_key'
 require './endpoints'
 require './merge_and_log'
 
@@ -20,6 +21,7 @@ require './merge_and_log'
 # 	host: 'localhost'
 # })
 # require 'pry'
+
 
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/student_tracker_app')
 
